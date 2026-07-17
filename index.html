@@ -105,6 +105,10 @@
   #counter{font-size:12px; color:var(--grey); min-width:50px; text-align:center;}
   .kw-list{display:flex; flex-wrap:wrap; gap:10px; margin-top:6px;}
   .kw{background:var(--navy3); border:1px solid var(--line); border-radius:6px; padding:6px 14px; font-size:12.5px; color:var(--grey);}
+  @media (max-width:700px){
+    .flow{flex-wrap:wrap; row-gap:14px;}
+    .flow .arrow{transform:rotate(90deg);}
+  }
   @media print{
     #deck{height:auto; overflow:visible;}
     .slide{page-break-after:always; height:100vh;}
@@ -140,153 +144,98 @@
   <div class="kicker">Sommaire</div>
   <h2 class="slide-title">Plan de la présentation</h2>
   <div class="rule"></div>
-  <div class="grid g3" style="margin-top:10px;">
-    <div class="card"><span class="num">01</span><h3>Contexte &amp; intérêt de la recherche</h3><p>Cadre général et pertinence du sujet</p></div>
-    <div class="card"><span class="num">02</span><h3>Problématique &amp; objectifs</h3><p>Question de recherche et objectifs</p></div>
-    <div class="card"><span class="num">03</span><h3>Revue de littérature &amp; hypothèses</h3><p>Cadre théorique et modèle d'hypothèses</p></div>
-    <div class="card"><span class="num">04</span><h3>Modèle conceptuel</h3><p>Schéma des relations entre variables</p></div>
-    <div class="card"><span class="num">05</span><h3>Méthodologie</h3><p>Démarche et dispositif d'enquête quantitative</p></div>
-    <div class="card"><span class="num">06</span><h3>Profil de l'échantillon</h3><p>N = 122 professionnels du marketing</p></div>
-    <div class="card"><span class="num">07</span><h3>Résultats de l'enquête</h3><p>Tris à plat, régression, corrélations, Friedman</p></div>
-    <div class="card"><span class="num">08</span><h3>Discussion &amp; recommandations</h3><p>Interprétation et implications managériales</p></div>
-    <div class="card"><span class="num">09</span><h3>Limites &amp; conclusion</h3><p>Limites, perspectives et synthèse</p></div>
+  <div class="grid g4" style="margin-top:10px;">
+    <div class="card"><span class="num">01</span><h3>Contexte &amp; problématique</h3><p>Cadre général, question de recherche et objectifs</p></div>
+    <div class="card"><span class="num">02</span><h3>Revue de littérature &amp; hypothèses</h3><p>Cadre théorique et hypothèses H1 à H5</p></div>
+    <div class="card"><span class="num">03</span><h3>Modèle conceptuel</h3><p>Schéma des relations entre variables</p></div>
+    <div class="card"><span class="num">04</span><h3>Méthodologie</h3><p>Positionnement et dispositif d'enquête quantitative</p></div>
+    <div class="card"><span class="num">05</span><h3>Résultats de l'enquête</h3><p>Profil, tris à plat, régression, corrélations, Friedman</p></div>
+    <div class="card"><span class="num">06</span><h3>Discussion &amp; recommandations</h3><p>Interprétation et implications managériales</p></div>
+    <div class="card"><span class="num">07</span><h3>Limites, perspectives &amp; conclusion</h3><p>Limites, pistes futures et synthèse</p></div>
   </div>
 </section>
 
-<!-- 3. CONTEXTE -->
+<!-- 3. CONTEXTE & PROBLEMATIQUE -->
 <section class="slide">
   <div class="pagenum">03</div>
   <div class="kicker">01 · Introduction</div>
-  <h2 class="slide-title">Contexte et intérêt de la recherche</h2>
+  <h2 class="slide-title">Contexte, problématique &amp; objectifs</h2>
   <div class="rule"></div>
-  <div class="grid g3" style="margin-top:10px;">
+  <div class="quote-box" style="margin-bottom:22px;">« Dans quelle mesure et selon quelles dimensions le marketing mix (4P) influence-t-il le succès du lancement des produits de grande consommation au Maroc ? »</div>
+  <div class="grid g3" style="margin-top:0;">
     <div class="card">
-      <h3><svg class="icon" viewBox="0 0 24 24"><path d="M3 12h18M12 3v18"/><circle cx="12" cy="12" r="9"/></svg>Contexte du marché</h3>
-      <p>Le marché marocain des produits de grande consommation (FMCG) évolue rapidement : nouveaux besoins, digitalisation, concurrence accrue. Le marketing mix (4P), introduit par McCarthy, reste l'un des meilleurs prédicteurs du succès d'un lancement (Salmen, 2021).</p>
+      <h3><svg class="icon" viewBox="0 0 24 24"><path d="M3 12h18M12 3v18"/><circle cx="12" cy="12" r="9"/></svg>Contexte</h3>
+      <p>Marché marocain des FMCG en pleine mutation : nouveaux besoins, digitalisation, concurrence accrue. Le marketing mix (4P) reste l'un des meilleurs prédicteurs du succès d'un lancement (Salmen, 2021).</p>
     </div>
     <div class="card">
-      <h3><svg class="icon" viewBox="0 0 24 24"><path d="M12 20V10M12 4v2"/><circle cx="12" cy="12" r="9"/></svg>Intérêt théorique</h3>
-      <p>Articuler la littérature sur le marketing mix avec celle, plus récente, sur les déterminants du succès de lancement (notoriété, valeur perçue, intention de rachat).</p>
+      <h3><svg class="icon" viewBox="0 0 24 24"><path d="M12 20V10M12 4v2"/><circle cx="12" cy="12" r="9"/></svg>Objectif principal</h3>
+      <p>Évaluer l'effet de chacune des composantes du mix sur les dimensions du succès du lancement : notoriété, valeur perçue, intention de rachat.</p>
     </div>
     <div class="card">
-      <h3><svg class="icon" viewBox="0 0 24 24"><path d="M3 3v18h18M7 15l4-4 3 3 5-6"/></svg>Intérêt managérial</h3>
-      <p>Dégager des pistes concrètes pour optimiser les lancements de produits de grande consommation sur un marché marocain dynamique et concurrentiel.</p>
-    </div>
-  </div>
-</section>
-
-<!-- 4. PROBLEMATIQUE -->
-<section class="slide">
-  <div class="pagenum">04</div>
-  <div class="kicker">01 · Introduction</div>
-  <h2 class="slide-title">Problématique, question de recherche &amp; objectifs</h2>
-  <div class="rule"></div>
-  <div class="quote-box">« Dans quelle mesure et selon quelles dimensions le marketing mix (4P) influence-t-il le succès du lancement des produits de grande consommation au Maroc ? »</div>
-  <div class="grid g2" style="margin-top:26px;">
-    <div class="card">
-      <h3>Objectif principal</h3>
-      <p>Évaluer l'effet de chacune des composantes du marketing mix sur les dimensions du succès du lancement : notoriété, valeur perçue, intention de rachat.</p>
-    </div>
-    <div class="card">
-      <h3>Objectifs secondaires</h3>
+      <h3><svg class="icon" viewBox="0 0 24 24"><path d="M3 3v18h18M7 15l4-4 3 3 5-6"/></svg>Objectifs secondaires</h3>
       <ul class="plain">
         <li>Identifier les facteurs les plus déterminants parmi les 4P</li>
         <li>Comparer leur poids relatif</li>
-        <li>Formuler des recommandations opérationnelles adaptées au Maroc</li>
+        <li>Formuler des recommandations adaptées au Maroc</li>
       </ul>
     </div>
   </div>
 </section>
 
-<!-- 5. REVUE LITTERATURE 4P -->
+<!-- 4. REVUE LITTERATURE -->
+<section class="slide">
+  <div class="pagenum">04</div>
+  <div class="kicker">02 · Cadre théorique</div>
+  <h2 class="slide-title" style="font-size:30px;">Revue de littérature</h2>
+  <div class="rule" style="margin:12px 0 16px 0;"></div>
+  <div style="font-size:12.5px; color:var(--gold); letter-spacing:1px; text-transform:uppercase; margin-bottom:8px;">Le marketing mix (4P)</div>
+  <div class="grid g4" style="margin-top:0; gap:14px;">
+    <div class="card" style="padding:14px 16px;">
+      <h3 style="font-size:14px; margin-bottom:6px;">Produit</h3>
+      <p style="font-size:12px;">Caractéristiques techniques, symboliques et fonctionnelles du bien.</p>
+      <div class="kw-list" style="margin-top:6px; gap:6px;"><span class="kw" style="padding:4px 10px; font-size:11px;">Salmen 2021</span><span class="kw" style="padding:4px 10px; font-size:11px;">Calvi 2000</span></div>
+    </div>
+    <div class="card" style="padding:14px 16px;">
+      <h3 style="font-size:14px; margin-bottom:6px;">Prix</h3>
+      <p style="font-size:12px;">Expression monétaire de la valeur perçue ; outil de positionnement.</p>
+      <div class="kw-list" style="margin-top:6px; gap:6px;"><span class="kw" style="padding:4px 10px; font-size:11px;">Hamizan 2023</span><span class="kw" style="padding:4px 10px; font-size:11px;">Muller 2005</span></div>
+    </div>
+    <div class="card" style="padding:14px 16px;">
+      <h3 style="font-size:14px; margin-bottom:6px;">Distribution</h3>
+      <p style="font-size:12px;">Levier logistique et commercial assurant l'accessibilité du produit.</p>
+      <div class="kw-list" style="margin-top:6px; gap:6px;"><span class="kw" style="padding:4px 10px; font-size:11px;">Doorasamy 2017</span></div>
+    </div>
+    <div class="card" style="padding:14px 16px;">
+      <h3 style="font-size:14px; margin-bottom:6px;">Promotion</h3>
+      <p style="font-size:12px;">Communication explicite et implicite incitant à l'achat.</p>
+      <div class="kw-list" style="margin-top:6px; gap:6px;"><span class="kw" style="padding:4px 10px; font-size:11px;">Trendel &amp; Warlop 2005</span></div>
+    </div>
+  </div>
+  <div style="font-size:12.5px; color:var(--gold); letter-spacing:1px; text-transform:uppercase; margin:18px 0 8px 0;">Le succès du lancement</div>
+  <div class="grid g3" style="margin-top:0; gap:14px;">
+    <div class="card" style="padding:14px 16px;">
+      <h3 style="font-size:14px; margin-bottom:6px;">Notoriété &amp; acceptation</h3>
+      <p style="font-size:12px;">La cohérence du mix façonne la perception dès le premier contact.</p>
+    </div>
+    <div class="card" style="padding:14px 16px;">
+      <h3 style="font-size:14px; margin-bottom:6px;">Valeur perçue</h3>
+      <p style="font-size:12px;">Capacité du produit à satisfaire les attentes de manière différenciée.</p>
+    </div>
+    <div class="card" style="padding:14px 16px;">
+      <h3 style="font-size:14px; margin-bottom:6px;">Intention de rachat</h3>
+      <p style="font-size:12px;">Fidélité transactionnelle (prix) vs relationnelle (attachement à la marque).</p>
+    </div>
+  </div>
+</section>
+
+<!-- 5. HYPOTHESES & MODELE CONCEPTUEL -->
 <section class="slide">
   <div class="pagenum">05</div>
   <div class="kicker">02 · Cadre théorique</div>
-  <h2 class="slide-title">Revue de littérature — le marketing mix (4P)</h2>
-  <div class="rule"></div>
-  <div class="grid g4" style="margin-top:10px;">
-    <div class="card">
-      <h3>Produit</h3>
-      <p>Caractéristiques techniques, symboliques et fonctionnelles du bien.</p>
-      <div class="kw-list"><span class="kw">Salmen 2021</span><span class="kw">Calvi 2000</span><span class="kw">Doorasamy 2017</span></div>
-    </div>
-    <div class="card">
-      <h3>Prix</h3>
-      <p>Expression monétaire de la valeur perçue ; outil de positionnement stratégique.</p>
-      <div class="kw-list"><span class="kw">Hamizan et al. 2023</span><span class="kw">Muller 2005</span></div>
-    </div>
-    <div class="card">
-      <h3>Distribution</h3>
-      <p>Moyens logistiques et commerciaux assurant l'accessibilité du produit — un levier stratégique, pas un simple service logistique.</p>
-      <div class="kw-list"><span class="kw">Doorasamy 2017</span><span class="kw">Calvi 2000</span></div>
-    </div>
-    <div class="card">
-      <h3>Promotion</h3>
-      <p>Actions de communication explicites et implicites visant à informer, séduire et inciter à l'achat.</p>
-      <div class="kw-list"><span class="kw">Trendel &amp; Warlop 2005</span><span class="kw">Ackerman &amp; Mathieu 2012</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- 6. REVUE LITTERATURE SUCCES -->
-<section class="slide">
-  <div class="pagenum">06</div>
-  <div class="kicker">02 · Cadre théorique</div>
-  <h2 class="slide-title">Revue de littérature — le succès du lancement</h2>
-  <div class="rule"></div>
-  <div class="grid g3" style="margin-top:10px;">
-    <div class="card">
-      <h3>Notoriété &amp; acceptation</h3>
-      <p>La cohérence du mix façonne la perception dès le premier contact ; l'originalité attire l'attention et génère du bouche-à-oreille.</p>
-      <div class="kw-list"><span class="kw">El Gozmir et al. 2023</span><span class="kw">Manceau et al. 2016</span></div>
-    </div>
-    <div class="card">
-      <h3>Valeur perçue</h3>
-      <p>Capacité du produit à satisfaire les attentes de manière différenciée ; dimension multidimensionnelle et dynamique (rapport qualité/prix, expérience, image).</p>
-      <div class="kw-list"><span class="kw">Bely 2005</span><span class="kw">Boyer &amp; Nefzi 2009</span><span class="kw">Herbeth et al. 2016</span></div>
-    </div>
-    <div class="card">
-      <h3>Intention de rachat</h3>
-      <p>Distinction entre fidélité transactionnelle (répétition liée au prix) et fidélité relationnelle (attachement à la marque).</p>
-      <div class="kw-list"><span class="kw">Cottet et al. 2012</span><span class="kw">Dampérat 2006</span><span class="kw">Boyer &amp; Nefzi 2008</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- 7. HYPOTHESES -->
-<section class="slide">
-  <div class="pagenum">07</div>
-  <div class="kicker">02 · Cadre théorique</div>
-  <h2 class="slide-title">Hypothèses de recherche</h2>
-  <div class="rule"></div>
-  <div class="quote-box" style="font-size:16px; font-style:normal; margin-bottom:22px;"><strong style="color:var(--gold-light)">H1 (principale)</strong> — le marketing mix (4P) influence significativement le succès du lancement des produits de grande consommation au Maroc.</div>
-  <div class="grid g2">
-    <div class="card">
-      <h3>Produit &amp; Prix</h3>
-      <ul class="plain">
-        <li><strong style="color:var(--gold-light)">H1a–c</strong> — le Produit influence positivement la notoriété, la valeur perçue et l'intention de rachat</li>
-        <li><strong style="color:var(--gold-light)">H2a–b</strong> — le Prix influence positivement la valeur perçue et l'intention d'achat</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Distribution, Promotion &amp; synergie</h3>
-      <ul class="plain">
-        <li><strong style="color:var(--gold-light)">H3a–b</strong> — la Distribution influence positivement la notoriété et l'intention de rachat</li>
-        <li><strong style="color:var(--gold-light)">H4a–b</strong> — la Promotion influence positivement la notoriété et l'intention d'achat</li>
-        <li><strong style="color:var(--gold-light)">H5</strong> — la synergie des 4P a un effet plus déterminant que l'action isolée de chaque levier</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- 8. MODELE CONCEPTUEL -->
-<section class="slide">
-  <div class="pagenum">08</div>
-  <div class="kicker">02 · Cadre théorique</div>
-  <h2 class="slide-title">Modèle conceptuel de la recherche</h2>
-  <div class="rule"></div>
-  <div class="diagram-wrap">
-    <svg viewBox="0 0 1000 480" style="width:100%; max-width:1050px; height:auto;">
+  <h2 class="slide-title" style="font-size:28px;">Hypothèses &amp; modèle conceptuel</h2>
+  <div class="subtitle" style="margin-bottom:8px; font-size:14px; line-height:1.5;"><strong style="color:var(--gold-light)">H1 (principale)</strong> — le marketing mix (4P) influence significativement le succès du lancement. <strong style="color:var(--gold-light)">H1–H4</strong> : effet positif de chaque levier (Produit, Prix, Distribution, Promotion) sur le succès. <strong style="color:var(--gold-light)">H5</strong> : la synergie des 4P a un effet plus déterminant que l'action isolée de chaque levier.</div>
+  <div class="diagram-wrap" style="height:66%;">
+    <svg viewBox="0 0 1000 480" style="width:100%; max-width:960px; height:auto;">
       <!-- left boxes -->
       <g font-family="-apple-system,Segoe UI,sans-serif">
         <rect x="20" y="20" width="230" height="70" rx="8" fill="#122544" stroke="#c9a15a" stroke-width="1.5"/>
@@ -335,50 +284,42 @@
   <p class="note" style="max-width:1050px;">Choix des 4P plutôt que des 7P justifié par la nature transactionnelle du terrain FMCG (produits de grande consommation).</p>
 </section>
 
-<!-- 9. METHODO POSITIONNEMENT -->
+<!-- 6. METHODOLOGIE -->
 <section class="slide">
-  <div class="pagenum">09</div>
+  <div class="pagenum">06</div>
   <div class="kicker">03 · Méthodologie</div>
-  <h2 class="slide-title">Méthodologie — positionnement et démarche</h2>
-  <div class="rule"></div>
-  <div class="grid g4" style="margin-top:10px;">
-    <div class="card"><h3>Positivisme</h3><p>La relation entre marketing mix et succès du lancement est appréhendée de façon objective et mesurable.</p></div>
-    <div class="card"><h3>Hypothético-déductif</h3><p>Les hypothèses H1 à H5 sont construites a priori à partir de la littérature, puis testées empiriquement.</p></div>
-    <div class="card"><h3>Méthode quantitative</h3><p>Choisie pour mesurer l'intensité des relations et tester l'hypothèse de synergie (H5).</p></div>
-    <div class="card"><h3>Terrain</h3><p>Marché marocain des FMCG ; professionnels ayant une expérience de lancement variée (agroalimentaire, cosmétique, pharma, distribution, conseil).</p></div>
+  <h2 class="slide-title" style="font-size:28px;">Méthodologie — positionnement &amp; dispositif</h2>
+  <div class="rule" style="margin:10px 0 16px 0;"></div>
+  <div class="grid g4" style="margin-top:0; gap:14px;">
+    <div class="card" style="padding:14px 16px;"><h3 style="font-size:13.5px; margin-bottom:6px;">Positivisme</h3><p style="font-size:12px;">Relation mix/succès appréhendée de façon objective et mesurable.</p></div>
+    <div class="card" style="padding:14px 16px;"><h3 style="font-size:13.5px; margin-bottom:6px;">Hypothético-déductif</h3><p style="font-size:12px;">H1 à H5 construites a priori puis testées empiriquement.</p></div>
+    <div class="card" style="padding:14px 16px;"><h3 style="font-size:13.5px; margin-bottom:6px;">Méthode quantitative</h3><p style="font-size:12px;">Choisie pour mesurer l'intensité des relations et tester H5.</p></div>
+    <div class="card" style="padding:14px 16px;"><h3 style="font-size:13.5px; margin-bottom:6px;">Terrain</h3><p style="font-size:12px;">Marché marocain des FMCG ; professionnels de lancement variés.</p></div>
   </div>
-</section>
-
-<!-- 10. METHODO DISPOSITIF -->
-<section class="slide">
-  <div class="pagenum">10</div>
-  <div class="kicker">03 · Méthodologie</div>
-  <h2 class="slide-title">Méthodologie — dispositif d'enquête</h2>
-  <div class="rule"></div>
-  <div class="flow">
+  <div class="flow" style="margin-top:22px;">
     <div class="step"><div class="n">164</div><div class="l">Réponses brutes</div></div>
     <div class="arrow">→</div>
     <div class="step"><div class="n">−42</div><div class="l">Doublons supprimés</div></div>
     <div class="arrow">→</div>
-    <div class="step"><div class="n">122</div><div class="l">Échantillon exploitable</div></div>
+    <div class="step"><div class="n">122</div><div class="l">Échantillon</div></div>
     <div class="arrow">→</div>
     <div class="step"><div class="n">~12 min</div><div class="l">Durée moyenne</div></div>
   </div>
-  <div class="grid g2" style="margin-top:26px;">
-    <div class="card">
-      <h3>Instrument</h3>
-      <p>Questionnaire en ligne structuré : 28 questions obligatoires (échelle de Likert 5 points) + 3 questions ouvertes facultatives. Diffusion du 18 juin au 5 juillet 2026.</p>
+  <div class="grid g2" style="margin-top:20px;">
+    <div class="card" style="padding:14px 18px;">
+      <h3 style="font-size:14px;">Instrument</h3>
+      <p style="font-size:12.5px;">Questionnaire en ligne structuré : 28 questions obligatoires (Likert 5 points) + 3 questions ouvertes facultatives. Diffusion du 18 juin au 5 juillet 2026.</p>
     </div>
-    <div class="card">
-      <h3>Traitement statistique</h3>
-      <p>Tri à plat, statistiques descriptives, test t, alpha de Cronbach, corrélations de Pearson, régression linéaire multiple, test de Friedman, ANOVA (Python pandas / scipy / statsmodels).</p>
+    <div class="card" style="padding:14px 18px;">
+      <h3 style="font-size:14px;">Traitement statistique</h3>
+      <p style="font-size:12.5px;">Tri à plat, statistiques descriptives, test t, alpha de Cronbach, corrélations de Pearson, régression linéaire multiple, test de Friedman, ANOVA (Python pandas / scipy / statsmodels).</p>
     </div>
   </div>
 </section>
 
-<!-- 11. PROFIL ECHANTILLON -->
+<!-- 7. PROFIL ECHANTILLON -->
 <section class="slide">
-  <div class="pagenum">11</div>
+  <div class="pagenum">07</div>
   <div class="kicker">04 · Résultats</div>
   <h2 class="slide-title">Profil de l'échantillon</h2>
   <div class="subtitle">N = 122 professionnels du marketing exerçant au Maroc — 68 % ont déjà participé à au moins un lancement de produit.</div>
@@ -392,23 +333,23 @@
   </div>
 </section>
 
-<!-- 12. PRATIQUES DOMINANTES -->
+<!-- 8. PRATIQUES DOMINANTES -->
 <section class="slide">
-  <div class="pagenum">12</div>
+  <div class="pagenum">08</div>
   <div class="kicker">04 · Résultats</div>
   <h2 class="slide-title" style="font-size:28px;">Pratiques dominantes du mix marketing au Maroc</h2>
   <div class="rule" style="margin:10px 0 16px 0;"></div>
   <div class="grid g2" style="margin-top:0; gap:16px;">
-    <div class="chart-box" style="padding:14px 18px;"><h3 style="margin-bottom:4px;">Facteur produit le plus décisif (Q8)</h3><canvas id="chartQ8" height="98"></canvas></div>
-    <div class="chart-box" style="padding:14px 18px;"><h3 style="margin-bottom:4px;">Canal de distribution privilégié (Q16)</h3><canvas id="chartQ16" height="98"></canvas></div>
-    <div class="chart-box" style="padding:14px 18px;"><h3 style="margin-bottom:4px;">Levier promotionnel le plus efficace (Q20)</h3><canvas id="chartQ20" height="98"></canvas></div>
-    <div class="chart-box" style="padding:14px 18px;"><h3 style="margin-bottom:4px;">Stratégie de prix la plus adaptée (Q12)</h3><canvas id="chartQ12" height="98"></canvas></div>
+    <div class="chart-box" style="padding:14px 18px;"><h3 style="margin-bottom:4px;">Facteur produit le plus décisif (Q8)</h3><div style="position:relative; height:132px;"><canvas id="chartQ8"></canvas></div></div>
+    <div class="chart-box" style="padding:14px 18px;"><h3 style="margin-bottom:4px;">Canal de distribution privilégié (Q16)</h3><div style="position:relative; height:132px;"><canvas id="chartQ16"></canvas></div></div>
+    <div class="chart-box" style="padding:14px 18px;"><h3 style="margin-bottom:4px;">Levier promotionnel le plus efficace (Q20)</h3><div style="position:relative; height:132px;"><canvas id="chartQ20"></canvas></div></div>
+    <div class="chart-box" style="padding:14px 18px;"><h3 style="margin-bottom:4px;">Stratégie de prix la plus adaptée (Q12)</h3><div style="position:relative; height:132px;"><canvas id="chartQ12"></canvas></div></div>
   </div>
 </section>
 
-<!-- 13. SCORES MOYENS -->
+<!-- 9. SCORES MOYENS -->
 <section class="slide">
-  <div class="pagenum">13</div>
+  <div class="pagenum">09</div>
   <div class="kicker">04 · Résultats</div>
   <h2 class="slide-title">Scores moyens par dimension (test des hypothèses H1 à H4)</h2>
   <div class="subtitle">Échelle de Likert 1–5, valeur neutre = 3. Les quinze items obtiennent tous des moyennes significativement supérieures à 3 (test t, p &lt; 0,05).</div>
@@ -425,9 +366,9 @@
   </div>
 </section>
 
-<!-- 14. CORRELATIONS -->
+<!-- 10. CORRELATIONS -->
 <section class="slide">
-  <div class="pagenum">14</div>
+  <div class="pagenum">10</div>
   <div class="kicker">04 · Résultats</div>
   <h2 class="slide-title">Corrélations avec le succès du lancement</h2>
   <div class="subtitle">Corrélations de Pearson, N = 122. Toutes les corrélations sont positives et significatives (p &lt; 0,01).</div>
@@ -441,9 +382,9 @@
   </div>
 </section>
 
-<!-- 15. REGRESSION -->
+<!-- 11. REGRESSION -->
 <section class="slide">
-  <div class="pagenum">15</div>
+  <div class="pagenum">11</div>
   <div class="kicker">04 · Résultats</div>
   <h2 class="slide-title">Régression linéaire multiple</h2>
   <div class="subtitle">Modèle : Succès = β₀ + β₁·Produit + β₂·Prix + β₃·Distribution + β₄·Promotion + ε</div>
@@ -461,14 +402,14 @@
   </div>
 </section>
 
-<!-- 16. FRIEDMAN + SYNTHESE -->
+<!-- 12. FRIEDMAN + SYNTHESE -->
 <section class="slide">
-  <div class="pagenum">16</div>
+  <div class="pagenum">12</div>
   <div class="kicker">04 · Résultats</div>
   <h2 class="slide-title">Hiérarchisation des leviers &amp; synthèse des hypothèses</h2>
   <div class="subtitle">Test de Friedman (classement des 4P, N = 122) : χ²(3) = 126,05 ; p &lt; 0,001 ; W de Kendall = 0,344</div>
   <div class="two-col" style="margin-top:6px;">
-    <div class="chart-box"><h3>Rang moyen par levier (1 = le plus important)</h3><canvas id="chartFriedman" height="220"></canvas></div>
+    <div class="chart-box"><h3>Rang moyen par levier (1 = le plus important)</h3><div style="position:relative; height:230px;"><canvas id="chartFriedman"></canvas></div></div>
     <div class="chart-box">
       <h3>Synthèse du test des hypothèses</h3>
       <table class="hyp">
@@ -483,41 +424,39 @@
   </div>
 </section>
 
-<!-- 17. DISCUSSION -->
+<!-- 13. DISCUSSION & IMPLICATIONS -->
 <section class="slide">
-  <div class="pagenum">17</div>
+  <div class="pagenum">13</div>
   <div class="kicker">05 · Discussion</div>
-  <h2 class="slide-title">Discussion des résultats</h2>
-  <div class="rule"></div>
-  <div class="grid g2" style="margin-top:6px;">
-    <div class="card"><h3>Confrontation à la littérature</h3><p>La primauté du Produit et de la Promotion fait écho à Doorasamy (2017), Calvi (2000) et Salmen (2021).</p></div>
-    <div class="card"><h3>Une lecture systémique</h3><p>La corroboration de H5 rejoint Bouchouar et al. (2017) et Manceau et al. (2016) : le mix doit être pensé comme un système plutôt que des leviers indépendants.</p></div>
-    <div class="card"><h3>L'effet de médiation de la Distribution</h3><p>L'absence d'effet direct s'explique par sa forte corrélation avec la Promotion (r = 0,512) : effet de médiation plausible plutôt qu'absence d'influence.</p></div>
-    <div class="card"><h3>Une variance partiellement expliquée</h3><p>Le R² du modèle (0,289) indique que 71,1 % de la variance du succès reste inexpliquée par le seul marketing mix (image de marque, timing, ressources internes).</p></div>
+  <h2 class="slide-title" style="font-size:27px;">Discussion &amp; implications managériales</h2>
+  <div class="rule" style="margin:10px 0 16px 0;"></div>
+  <div class="grid g2" style="margin-top:0; gap:16px;">
+    <div class="card">
+      <h3>Confrontation à la littérature</h3>
+      <p>La primauté du Produit et de la Promotion fait écho à Doorasamy (2017), Calvi (2000) et Salmen (2021). La corroboration de H5 rejoint Bouchouar et al. (2017) et Manceau et al. (2016) : le mix doit être pensé comme un système plutôt que des leviers indépendants.</p>
+    </div>
+    <div class="card">
+      <h3>Médiation de la Distribution &amp; variance expliquée</h3>
+      <p>L'absence d'effet direct de la Distribution s'explique par sa forte corrélation avec la Promotion (r = 0,512). Le R² du modèle (0,289) indique que 71,1 % de la variance du succès reste inexpliquée par le seul marketing mix.</p>
+    </div>
+    <div class="card">
+      <h3>Penser en architecture d'ensemble</h3>
+      <p>Le score global du mix prédit mieux le succès que chaque composante isolée. Prioriser la qualité et l'adéquation culturelle du produit, ainsi que la communication digitale (réseaux sociaux cités par 36,9 % comme levier le plus efficace).</p>
+    </div>
+    <div class="card">
+      <h3>Canal &amp; adaptation culturelle</h3>
+      <p>Renforcer le canal e-commerce (cité par 53,3 % comme le plus efficace) sans négliger le commerce de proximité. Adapter culturellement la communication (Darija, valeurs familiales, halal, Ramadan).</p>
+    </div>
   </div>
 </section>
 
-<!-- 18. IMPLICATIONS -->
+<!-- 14. LIMITES, PERSPECTIVES & CONCLUSION -->
 <section class="slide">
-  <div class="pagenum">18</div>
-  <div class="kicker">05 · Discussion</div>
-  <h2 class="slide-title">Implications managériales &amp; recommandations</h2>
-  <div class="rule"></div>
-  <div class="grid g2" style="margin-top:6px;">
-    <div class="card"><h3>Penser en architecture d'ensemble</h3><p>Le score global du mix prédit mieux le succès que chaque composante isolée : éviter un investissement déséquilibré sur un seul levier.</p></div>
-    <div class="card"><h3>Prioriser produit &amp; communication digitale</h3><p>Qualité et adéquation culturelle du produit, cohérence de la communication (réseaux sociaux cités par 36,9 % comme levier le plus efficace).</p></div>
-    <div class="card"><h3>Renforcer le canal e-commerce</h3><p>Cité par 53,3 % comme le plus efficace, sans négliger le commerce de proximité, décisif pour l'accessibilité initiale.</p></div>
-    <div class="card"><h3>Adapter culturellement la communication</h3><p>Darija, valeurs familiales, exigences halal, Ramadan — et capitaliser sur les enseignements des lancements précédents.</p></div>
-  </div>
-</section>
-
-<!-- 19. LIMITES -->
-<section class="slide">
-  <div class="pagenum">19</div>
+  <div class="pagenum">14</div>
   <div class="kicker">06 · Conclusion</div>
-  <h2 class="slide-title">Limites et perspectives de recherche</h2>
-  <div class="rule"></div>
-  <div class="grid g2" style="margin-top:6px;">
+  <h2 class="slide-title" style="font-size:27px;">Limites, perspectives &amp; conclusion</h2>
+  <div class="rule" style="margin:10px 0 14px 0;"></div>
+  <div class="grid g2" style="margin-top:0;">
     <div class="card">
       <h3>Limites</h3>
       <ul class="plain">
@@ -533,27 +472,14 @@
         <li>Consolidation psychométrique de l'instrument</li>
         <li>Modélisation par équations structurelles (PLS-SEM)</li>
         <li>Réplication sur un échantillon plus large et probabiliste</li>
-        <li>Volet qualitatif complémentaire (22,1 % des répondants disponibles pour un entretien)</li>
+        <li>Volet qualitatif complémentaire (22,1 % des répondants disponibles)</li>
       </ul>
     </div>
   </div>
+  <div class="quote-box" style="margin-top:18px; font-size:14.5px;">Le Produit et la Promotion exercent chacun une influence propre et significative sur le succès du lancement ; le Prix et la Distribution ne s'imposent que combinés aux autres leviers. C'est la cohérence d'ensemble du marketing mix — davantage que chaque levier isolé — qui explique le mieux le succès du lancement au Maroc.</div>
 </section>
 
-<!-- 20. CONCLUSION -->
-<section class="slide">
-  <div class="pagenum">20</div>
-  <div class="kicker">06 · Conclusion</div>
-  <h2 class="slide-title">Conclusion générale</h2>
-  <div class="rule"></div>
-  <div class="grid g2" style="margin-top:10px;">
-    <div class="card"><h3>Produit &amp; Promotion</h3><p>Exercent chacun une influence propre et significative sur le succès perçu du lancement.</p></div>
-    <div class="card"><h3>Prix &amp; Distribution</h3><p>N'exercent pas d'effet direct aussi robuste une fois les autres leviers contrôlés.</p></div>
-    <div class="card"><h3>Cohérence du mix</h3><p>C'est la cohérence d'ensemble du marketing mix, davantage que chaque levier isolé, qui explique le mieux le succès du lancement.</p></div>
-    <div class="card"><h3>Une lecture systémique</h3><p>Ce résultat invite entreprises et chercheurs à privilégier une lecture systémique du marketing mix sur le marché marocain.</p></div>
-  </div>
-</section>
-
-<!-- 21. MERCI -->
+<!-- 15. MERCI -->
 <section class="slide" style="background:radial-gradient(circle at 30% 70%, #16305a 0%, #0b1b33 60%); align-items:center; text-align:center;">
   <div style="margin:0 auto;">
     <div class="kicker" style="justify-content:center;">Merci de votre attention</div>
@@ -567,7 +493,7 @@
 
 <div class="nav-controls">
   <button id="prevBtn">‹</button>
-  <span id="counter">1 / 21</span>
+  <span id="counter">1 / 15</span>
   <button id="nextBtn">›</button>
 </div>
 
@@ -687,7 +613,7 @@ function miniBar(id, labels, data){
     data:{ labels, datasets:[{ data, backgroundColor:GOLD, borderRadius:3, barThickness:12 }] },
     options:{ indexAxis:'y', responsive:true, maintainAspectRatio:false,
       plugins:{legend:{display:false}},
-      scales:{ x:{grid:gridCfg, max:60, ticks:{callback:v=>v+'%'}}, y:{grid:noGrid, ticks:{font:{size:11}}} } },
+      scales:{ x:{grid:gridCfg, max:60, ticks:{callback:v=>v+'%'}}, y:{grid:noGrid, ticks:{font:{size:11}, autoSkip:false}} } },
     plugins:[valueLabelPlugin('%')]
   });
 }
